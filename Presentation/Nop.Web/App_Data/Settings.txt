@@ -1,0 +1,2 @@
+DataProvider: sqlserver
+DataConnectionString: Data Source=u415351.mssql.masterhost.ru;Initial Catalog=u415351;Integrated Security=False;Persist Security Info=False;User ID=u415351;Password=dinescler2iver
