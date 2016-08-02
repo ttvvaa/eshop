@@ -119,7 +119,7 @@
                 </div>
             }
             @*filtering*@
-            @if (Model.PagingFilteringContext.SpecificationFilter.Enabled)
+            @if (Model.PagingFilteringContext.SpecificationFilter.Enabled || true)
             {
                 @Html.Partial("_FilterSpecsBox", Model.PagingFilteringContext.SpecificationFilter, new ViewDataDictionary())
             }

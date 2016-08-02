@@ -49,6 +49,9 @@
     @Html.Partial("_ProductBreadcrumb", Model.Breadcrumb)
 }
 @Html.Widget("productdetails_after_breadcrumb", Model.Id)
+
+@Html.Partial("_BuyOneClick")
+
 <div class="page product-details-page">
     <div class="page-body">
         @Html.Widget("productdetails_top", Model.Id)
@@ -139,54 +142,56 @@
                                         </div>
                                     </div>
                                     @Html.Partial("_ShareButton", Model)
+									@Html.Partial("_BuyOneClickButton")
                                     @Html.Widget("productdetails_overview_bottom", Model.Id)
                                 
                             </div>
                             </div>
                             <div class="col-md-12 product-details-tabs">
                                 <ul class="nav nav-tabs">
+				<!--
                                     @if (!String.IsNullOrEmpty(@Html.Partial("_ProductTags", Model.ProductTags).ToString()))
                                     {
                                         <li class="active"><a href="#tags" data-toggle="tab">@T("Products.Tags")</a></li>
                                     }
+-->
                                     @if (!String.IsNullOrEmpty(Model.FullDescription))
                                     {
 
-                                        <li><a href="#description" data-toggle="tab">Описание</a></li>
+                                        <li class="active"><a href="#description" data-toggle="tab">Описание</a></li>
                                     }
                                     @if (!String.IsNullOrEmpty(@Html.Partial("_ProductSpecifications", Model.ProductSpecifications).ToString()))
                                     {
 
                                         <li><a href="#specification" data-toggle="tab">@T("Products.Specs")</a></li>
                                     }
-                                    
-                                    <li><a href="#instructions" data-toggle="tab">Инструкции</a></li>
+                                        <li><a href="#instructions" data-toggle="tab">Инструкции</a></li>
+					<li><a href="#video" data-toggle="tab">Видео</a></li>
 
-                                    <li><a href="#video" data-toggle="tab">Видео</a></li>
                                 </ul>
                                 <div class="tab-content">
+<!--
                                     <div class="product-tags tab-pane fade in active" id="tags">
                                         @Html.Partial("_ProductTags", Model.ProductTags)
                                     </div>
+-->
+
                                     @if (!String.IsNullOrEmpty(Model.FullDescription))
                                     {
-                                        <div class="full-description fade tab-pane" id="description" itemprop="description">
+                                        <div class="full-description fade tab-pane in active" id="description" itemprop="description">
                                             @Html.Raw(Model.FullDescription)
                                         </div>
                                     }
                                     <div class="product-specification fade tab-pane" id="specification">
                                         @Html.Partial("_ProductSpecifications", Model.ProductSpecifications)
                                     </div>
-
-
-
-                                    <div class="full-instructions fade tab-pane" id="instructions" itemprop="instructions">
-                                        Тут инструкции для скачивания
+                                    <div class="product-instructions fade tab-pane" id="instructions">
+                                        Инструкции
+                                    </div>
+                                    <div class="product-video fade tab-pane" id="video">
+                                        ВИДЕО
                                     </div>
 
-                                    <div class="full-video fade tab-pane" id="video" itemprop="video">
-                                        Тут видео должно быть
-                                    </div>
                                 </div>
                             </div>
                         </div>

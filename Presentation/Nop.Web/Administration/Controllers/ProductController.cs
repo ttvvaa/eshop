@@ -2493,9 +2493,10 @@ namespace Nop.Admin.Controllers
             }
 
             //we do not allow editing these fields anymore (when we have distinct attribute types)
-            //psa.CustomValue = model.CustomValue;
-            //psa.AllowFiltering = model.AllowFiltering;
-            psa.ShowOnProductPage = model.ShowOnProductPage;
+			psa.CustomValue = model.ValueRaw;
+            psa.AllowFiltering = model.AllowFiltering;
+
+			psa.ShowOnProductPage = model.ShowOnProductPage;
             psa.DisplayOrder = model.DisplayOrder;
             _specificationAttributeService.UpdateProductSpecificationAttribute(psa);
 

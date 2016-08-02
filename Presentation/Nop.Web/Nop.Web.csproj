@@ -450,6 +450,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\Install\SqlServer.Indexes.sql" />
+    <Content Include="App_Data\Settings.txt" />
     <Content Include="Content\BBEditor\ed.js" />
     <Content Include="Content\BBEditor\images\bold.gif" />
     <Content Include="Content\BBEditor\images\code.gif" />
@@ -1662,8 +1663,6 @@
     <Content Include="Themes\CoreTheme\Content\css\print.css" />
     <Content Include="Themes\CoreTheme\Content\css\theme-styles-responsive.css" />
     <Content Include="Themes\CoreTheme\Content\css\theme-styles.css" />
-    <Content Include="Themes\CoreTheme\Content\fonts\fontawesome-webfont.svg" />
-    <Content Include="Themes\CoreTheme\Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Themes\CoreTheme\Content\images\ajax_loader_large.gif" />
     <Content Include="Themes\CoreTheme\Content\images\ajax_loader_small.gif" />
     <Content Include="Themes\CoreTheme\Content\images\arrow-dropdown.png" />
@@ -2078,11 +2077,13 @@
     <Content Include="Views\Vendor\ApplyVendor.cshtml" />
     <Content Include="Views\Product\_Discontinued.cshtml" />
     <Content Include="Themes\CoreTheme\Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Themes\CoreTheme\Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Themes\CoreTheme\Content\fonts\fontawesome-webfont.ttf" />
     <Content Include="Themes\CoreTheme\Content\fonts\fontawesome-webfont.woff" />
     <Content Include="Themes\CoreTheme\Content\fonts\fontawesome-webfont.woff2" />
     <Content Include="Themes\CoreTheme\Content\fonts\FontAwesome.otf" />
     <Content Include="Themes\CoreTheme\Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Themes\CoreTheme\Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Themes\CoreTheme\Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Themes\CoreTheme\Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Themes\CoreTheme\Content\fonts\glyphicons-halflings-regular.woff2" />
@@ -2276,6 +2277,8 @@
     <Content Include="Themes\CoreTheme\Views\Web.config" />
     <Content Include="Themes\CoreTheme\Views\Widget\WidgetsByZone.cshtml" />
     <Content Include="Themes\CoreTheme\Views\_ViewStart.cshtml" />
+    <Content Include="Themes\CoreTheme\Views\Product\_BuyOneClick.cshtml" />
+    <Content Include="Themes\CoreTheme\Views\Product\_BuyOneClickButton.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Roxy_Fileman\tmp\" />

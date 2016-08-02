@@ -4,18 +4,18 @@
 @functions{
     public bool BreadCrumbContainsCurrentCategoryId(CategorySimpleModel category)
     {
-        if (Model.CurrentCategoryId == 0)
-            return false;
+//        if (Model.CurrentCategoryId == 0)
+//            return false;
 
         if (category.Id == Model.CurrentCategoryId)
             return true;
 
         foreach (var subCategory in category.SubCategories)
         {
-            if (BreadCrumbContainsCurrentCategoryId(subCategory))
-            {
+//            if (BreadCrumbContainsCurrentCategoryId(subCategory))
+//            {
                 return true;
-            }
+//            }
         }
 
         return false;
