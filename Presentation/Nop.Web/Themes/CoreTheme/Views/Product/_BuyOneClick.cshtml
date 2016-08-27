@@ -1,0 +1,58 @@
+﻿@model ProductDetailsModel
+@using Nop.Web.Models.Catalog;
+<div id="sendprivatemessage-window" style="display:none;">
+	@using (Html.BeginForm("SendPm", "Customer", new { id = Model.Id }))
+	{
+		@Html.AntiForgeryToken()
+		<table style="text-align: left;">
+			<tr>
+				<td class="adminTitle">
+					ДОБАВЛЕНО В КОРЗИНУ:
+				</td>
+				<td class="adminData">
+					@Html.Editor("FIO")
+					@*@Html.ValidationMessageFor(model => model.SendPm.Subject)*@
+				</td>
+			</tr>
+			<tr>
+				<td class="adminTitle">
+					@*@Html.NopLabelFor(model => model.SendPm.Message):*@
+				</td>
+				<td class="adminData">
+					@*@Html.TextAreaFor(model => model.SendPm.Message, new { style = "Width: 350px; Height: 250px;" })
+					@Html.ValidationMessageFor(model => model.SendPm.Message)*@
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit" class="k-button" value="КУПИТЬ" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<div class="product-collateral">
+						@Html.Action("ProductsAlsoPurchased", "Product", new { productId = Model.Id })
+						@Html.Action("RelatedProducts", "Product", new { productId = Model.Id })
+					</div>
+				</td>
+			</tr>
+		</table>
+	}
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+    	$("#buyoneclick").click(function (e) {
+            e.preventDefault();
+            var window = $("#sendprivatemessage-window");
+            if (!window.data("kendoWindow")) {
+                window.kendoWindow({
+                    modal: true,
+                    width: "500px",
+                    title: "КУПИТЬ В ОДИН КЛИК",
+                    actions: ["Close"]
+                });
+            }
+            window.data('kendoWindow').center().open();
+        });
+    });
+</script>

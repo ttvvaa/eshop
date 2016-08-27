@@ -50,7 +50,7 @@
 }
 @Html.Widget("productdetails_after_breadcrumb", Model.Id)
 
-@Html.Partial("_BuyOneClick")
+@Html.Partial("_BuyOneClick", Model)
 
 <div class="page product-details-page">
     <div class="page-body">
@@ -141,8 +141,8 @@
                                             @Html.Widget("productdetails_inside_overview_buttons_after", Model.Id)
                                         </div>
                                     </div>
-                                    @Html.Partial("_ShareButton", Model)
-									@Html.Partial("_BuyOneClickButton")
+                                    @Html.Partial("_ShareButton")
+									@Html.Partial("_BuyOneClickButton", Model)
                                     @Html.Widget("productdetails_overview_bottom", Model.Id)
                                 
                             </div>
