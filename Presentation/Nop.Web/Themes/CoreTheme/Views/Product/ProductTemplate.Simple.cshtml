@@ -66,13 +66,13 @@
                                     @Model.Name
                                 </h1>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 @Html.Widget("productdetails_before_pictures", Model.Id)
                                 <!--product pictures-->
                                 @Html.Partial("_ProductDetailsPictures", Model)
                                 @Html.Widget("productdetails_after_pictures", Model.Id)
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 @Html.Partial("_Discontinued", Model)
                                 <div class="overview">
                                     @if (!String.IsNullOrEmpty(Model.ShortDescription))

@@ -760,7 +760,7 @@ ul.poll-results{margin-top:10px;}
 
 /* PRODUCT DETAILS PAGE */
 .product-collateral{margin-bottom:10px;clear:both;overflow:hidden;}
-.product-details-page .gallery .picture{text-align:center;}
+.product-details-page .gallery .picture{text-align:center;width:100%;}
 .product-details-page .gallery .picture-thumbs a:hover,.product-details-page .gallery .picture-thumbs a:focus{text-decoration: none;}
 .product-details-page .overview{margin-bottom: 20px;}
 .overview .product-name h1{font-size: 16px;line-height:1.3em;margin-bottom:10px;margin-top:0;}
